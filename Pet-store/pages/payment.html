@@ -1,29 +1,59 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Payment - PawPals</title>
-<link rel="stylesheet" href="../styles/globals.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment - PawPals</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Fredoka+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="../styles.css">
 </head>
+
 <body>
-<header>
-  <h1>PawPals</h1>
+  <!-- Navbar -->
   <nav>
-    <a href="../index.html">Home</a> |
-    <a href="categories.html">Categories</a> |
-    <a href="about.html">About Us</a> |
-    <a href="contact.html">Contact Us</a>
+    <div class="left">
+      <div class="logo">
+        <a href="../index.html"><img src="../assets/logo.png" alt="logo" height="80" width="80"></a>
+      </div>
+    </div>
+    <div class="right">
+      <ul class="nav-links">
+        <li><a href="../pages/categories.html">Categories</a></li>
+        <li><a href="../pages/about.html">About</a></li>
+        <li><a href="../pages/contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="end">
+      <a href="#"><abbr title="Github"><i class='bx bxl-github'></i></abbr></a>
+      <a href="../pages/cart.html"><abbr title="Cart"><i class='bx bx-cart'></i></abbr></a>
+      <a href="#" class="hamburger"><i class='bx bx-menu'></i></a>
+    </div>
   </nav>
-</header>
-<div class="container" style="text-align:center;">
-  <h2>Payment Gateway</h2>
-  <p>Scan the QR code below to complete payment.</p>
-  <img src="../public/images/paymentqrcode.jpg" alt="QR Code" width="200" height="200"/>
-  <br/><br/>
-  <button onclick="alert('Payment Successful!'); window.location.href='../index.html';">Confirm Payment</button>
-</div>
-<footer>&copy; 2025 PawPals. All Rights Reserved.</footer>
+
+  <!-- Main Content -->
+  <main class="page-content">
+    <section class="page-header" style="text-align:center;">
+      <h1>Payment Gateway</h1>
+      <p>Scan the QR code below to complete your payment securely.</p>
+      <img src="../assets/paymentqrcode.jpg" alt="QR Code" width="200" height="200" />
+      <br><br>
+      <button onclick="alert('Payment Successful!'); window.location.href='../index.html';">Confirm Payment</button>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>…same footer…</footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
 </body>
+
 </html>
