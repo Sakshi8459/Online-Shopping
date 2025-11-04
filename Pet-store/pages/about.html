@@ -1,26 +1,77 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>About Us - PawPals</title>
-<link rel="stylesheet" href="../styles/globals.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - PawPals</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Fredoka+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="../styles.css">
 </head>
+
 <body>
-<header>
-  <h1>PawPals</h1>
+  <!-- Navbar -->
   <nav>
-    <a href="../index.html">Home</a> |
-    <a href="categories.html">Categories</a> |
-    <a href="about.html">About Us</a> |
-    <a href="contact.html">Contact Us</a>
+    <div class="left">
+      <div class="logo">
+        <a href="../index.html"><img src="../assets/logo.png" alt="logo" height="80" width="80"></a>
+      </div>
+    </div>
+    <div class="right">
+      <ul class="nav-links">
+        <li><a href="../pages/categories.html">Categories</a></li>
+        <li><a href="../pages/about.html" class="active">About</a></li>
+        <li><a href="../pages/contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="end">
+      <a href="#"><abbr title="Github"><i class='bx bxl-github'></i></abbr></a>
+      <a href="../pages/cart.html"><abbr title="Cart"><i class='bx bx-cart'></i></abbr></a>
+      <a href="#" class="hamburger"><i class='bx bx-menu'></i></a>
+    </div>
   </nav>
-</header>
-<div class="container">
-  <h2>About Us</h2>
-  <p>Welcome to PawPals – your one-stop destination for pet-friendly products and supplies. We believe every furry friend deserves the best, and our mission is to bring you high-quality items for your pets.</p>
-</div>
-<footer>&copy; 2025 PawPals. All Rights Reserved.</footer>
+
+  <!-- Main Content -->
+  <main class="page-content">
+    <section class="page-header">
+      <h1>About PawPals</h1>
+      <p>Welcome to PawPals – your one-stop destination for premium pet care.  
+        We’re passionate about bringing comfort, fun, and happiness to pets everywhere.  
+        From toys to food and accessories, every product is handpicked with love.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2>PawPals</h2>
+        <p>Elevating pet care with premium products for your beloved companions.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../pages/about.html">About</a></li>
+          <li><a href="../pages/categories.html">Categories</a></li>
+          <li><a href="../pages/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 PawPals. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
 </body>
+
 </html>
