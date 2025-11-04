@@ -1,32 +1,62 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Cart - PawPals</title>
-<link rel="stylesheet" href="../styles/globals.css" />
-<script>
-function goToPayment(){
-  window.location.href = 'payment.html';
-}
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart - PawPals</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Fredoka+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="../styles.css">
+  <script>
+    function goToPayment() {
+      window.location.href = 'payment.html';
+    }
+  </script>
 </head>
+
 <body>
-<header>
-  <h1>PawPals</h1>
+  <!-- Navbar -->
   <nav>
-    <a href="../index.html">Home</a> |
-    <a href="categories.html">Categories</a> |
-    <a href="about.html">About Us</a> |
-    <a href="contact.html">Contact Us</a>
+    <div class="left">
+      <div class="logo">
+        <a href="../index.html"><img src="../assets/logo.png" alt="logo" height="80" width="80"></a>
+      </div>
+    </div>
+    <div class="right">
+      <ul class="nav-links">
+        <li><a href="../pages/categories.html">Categories</a></li>
+        <li><a href="../pages/about.html">About</a></li>
+        <li><a href="../pages/contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="end">
+      <a href="#"><abbr title="Github"><i class='bx bxl-github'></i></abbr></a>
+      <a href="../pages/cart.html" class="active"><abbr title="Cart"><i class='bx bx-cart'></i></abbr></a>
+      <a href="#" class="hamburger"><i class='bx bx-menu'></i></a>
+    </div>
   </nav>
-</header>
-<div class="container">
-  <h2>Your Cart</h2>
-  <p>No items added yet.</p>
-  <button onclick="goToPayment()">Proceed to Checkout</button>
-</div>
-<footer>&copy; 2025 PawPals. All Rights Reserved.</footer>
+
+  <!-- Main Content -->
+  <main class="page-content">
+    <section class="page-header">
+      <h1>Your Cart</h1>
+      <p>No items added yet.</p>
+      <button onclick="goToPayment()">Proceed to Checkout</button>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>…same footer…</footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
 </body>
+
 </html>
